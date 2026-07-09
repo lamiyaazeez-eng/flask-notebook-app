@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Notebook</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>My Notebook</h1>
+        <p class="subtitle">Your personal space for thoughts and ideas</p>
+    </div>
+
+    {% if error %}
+        <p style ="color:#b23b3b; text-align: center; margin-bottom: 10px;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="/add">
+    <textarea name="note" rows="4" placeholder="Write your note here..."></textarea><br>
+    <div class="color-picker">
+        <label><input type="radio" name="color" value="#fffdf9" checked> <span class="swatch cream"></span></label>
+        <label><input type="radio" name="color" value="#ffe8d6"> <span class="swatch peach"></span></label>
+        <label><input type="radio" name="color" value="#d8e8d4"> <span class="swatch mint"></span></label>
+        <label><input type="radio" name="color" value="#dce4f0"> <span class="swatch blue"></span></label>
+        <label><input type="radio" name="color" value="#f0dce8"> <span class="swatch pink"></span></label>
+    </div>
+    <button type="submit">Save Note</button>
+</form>
+
+    <div class="notes">
+        {% for note in notes|sort(attribute='pinned', reverse=true) %}
+            <div class="note-card {% if note.pinned %}pinned{% endif %}" style="background-color: {{ note.color }};">
+                <p>{{ note.content }}</p>
+                <div class="note-meta">{{ note.timestamp }}</div>
+                <div class="note-actions">
+                    <a href="/pin/{{ note.id }}" class="icon-btn pin-icon {% if note.pinned %}active{% endif %}" title="Pin">📌</a>
+                    <a href="/edit/{{ note.id }}" class="icon-btn" title="Edit">✏️</a>
+                    <a href="/delete/{{ note.id }}" class="icon-btn delete-icon" title="Delete" onclick="return confirm('Delete this note?');">🗑️</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

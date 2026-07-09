@@ -1,0 +1,206 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #faf6f0;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3a3a3a;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin:0;
+            background: linear-gradient(90deg, #5b8266, #d4a94e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
+        .subtitle {
+            font-style: italic;
+            color: #999;
+            font-size: 15px;
+            margin-top: 6px;
+        }
+
+        form {
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #e0dcd4;
+            font-size: 15px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 10px 22px;
+            background-color: #5b8266;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #46684f;
+        }
+
+        .notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .note-card {
+            background: #fffdf9;
+            padding: 18px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            width: 260px;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            position: relative;
+        }
+
+        .note-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+
+        .note-card.pinned {
+            border: 2px solid #d4a94e;
+            background: #fffaf0;
+        }
+
+        .note-card p {
+            margin: 0 0 12px 0;
+            font-size: 15px;
+            color: #333;
+            word-wrap: break-word;
+        }
+
+        .note-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .note-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            border: none;
+            background: #f1ede6;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.15s ease;
+        }
+
+        .icon-btn:hover {
+            background: #e2ddd2;
+        }
+
+        .delete-icon:hover {
+            background: #f4d6d6;
+        }
+
+        .pin-icon.active {
+            background: #f5e2a8;
+        }
+        .color-picker {
+            margin-top: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+        .color-picker input{
+            display:none;
+        }
+        .swatch {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            display:block
+        }
+        .color-picker input:checked + .swatch {
+            border-color: #5b8266;
+        }
+        .cream { background-color: #fffdf9; }
+        .peach { background-color: #ffe8d6; }
+        .mint { background-color: #d8e8d4; }
+        .blue { background-color: #dce4f0; }
+        .pink { background-color: #f0dce8; }
+
+    
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #faf6f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        form {
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 500px;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #e0dcd4;
+            font-size: 15px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        button {
+            margin-top: 12px;
+            padding: 10px 22px;
+            background-color: #5b8266;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
