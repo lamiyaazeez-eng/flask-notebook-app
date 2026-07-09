@@ -23,7 +23,10 @@ A simple, aesthetic note-taking web app built with Flask, featuring full CRUD fu
 4. Install dependencies: `pip install flask`
 5. Run the app: `python app.py`
 6. Open your browser at `http://127.0.0.1:5000`
+##screenshots
+![App Screenshot](app-screenshot.png)
 
+by
 
 ## Author
 Lamiya — B.Tech ECE Graduate | Aspiring Embedded Systems/IoT Engineer
